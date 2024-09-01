@@ -14,7 +14,7 @@ public class juego {
 
 		System.out.println("[P]iedra, [Pa]pel, [T]ijeras");
 		String[] opciones = {"P", "Pa", "T"};
-		//List<String> listOpciones = Arrays.asList(opciones);
+		List<String> listOpciones = Arrays.asList(opciones);
 		
 		int pcEleccion = aleatorio.nextInt(opciones.length);
 		String respuesta = opciones[pcEleccion];
@@ -25,7 +25,7 @@ public class juego {
 			System.out.print("elige una de las opciones: ");
 			String eleccion = teclado.nextLine();
 			
-			if (opciones.contains(eleccion)) {
+			if (!listOpciones.contains(eleccion)) {
 
 				System.out.println("\nSolo las opciones mostradas en pantalla\n");
 				continue;	
