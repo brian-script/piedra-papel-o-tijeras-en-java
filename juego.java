@@ -17,8 +17,7 @@ public class juego {
 		List<String> listOpciones = Arrays.asList(opciones);
 		
 		int pcEleccion = aleatorio.nextInt(opciones.length);
-		String respuesta = opciones[0];
-		//System.out.println(respuesta);
+		String respuesta = opciones[pcEleccion];
 
 		while (true) {
 
@@ -32,16 +31,49 @@ public class juego {
 
 			}
 
-			System.out.println((eleccion == respuesta));
-
+			System.out.println("Pc saco: " + respuesta);
 			if (eleccion.equals(respuesta)) {
 
 				System.out.println("Empate");
+				break;
 
-			} 
+			}else if (eleccion.equals("P") && respuesta.equals("Pa")) {
+
+				System.out.println("Perdiste");
+				break;
+
+			}else if (eleccion.equals("P") && respuesta.equals("T")) {
+
+				System.out.println("Ganaste");
+				break;
+	
+			}else if (eleccion.equals("Pa") && respuesta.equals("P")) {
+
+				System.out.println("Ganaste");
+				break;
+
+			}else if (eleccion.equals("Pa") && respuesta.equals("T")) {
+
+				System.out.println("Perdiste");
+				break;
+
+			}else if (eleccion.equals("T") && respuesta.equals("P")) {
+			
+				System.out.println("Perdiste");
+				break;
+
+			}else if (eleccion.equals("T") && respuesta.equals("Pa")) {
+
+				System.out.println("Ganaste");
+				break;
+
+			}
 
 		}
 
 	}
 
 }
+//fue bastante gratificante hacer este programa me enseño otro enfoque para aplicar en otros lenguajes de programacion
+//tambien gracias a las pruebas y error aprendi a usar un poco git porque me equivoque bastantes veces y tenia que regresar una version anterior de mi programa
+//:)
