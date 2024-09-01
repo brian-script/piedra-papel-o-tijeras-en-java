@@ -70,6 +70,8 @@ public class juego {
 			}
 
 		}
+		
+		teclado.close();
 
 	}
 
