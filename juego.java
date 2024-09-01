@@ -28,11 +28,13 @@ public class juego {
 			if (!listOpciones.contains(eleccion)) {
 
 				System.out.println("\nSolo las opciones mostradas en pantalla\n");
-				continue;	
+				continue;
 
 			}
-			
-			if (eleccion == "P" && opciones[0] == "P") {
+
+			System.out.println((eleccion == respuesta));
+
+			if (eleccion.equals(respuesta)) {
 
 				System.out.println("Empate");
 
