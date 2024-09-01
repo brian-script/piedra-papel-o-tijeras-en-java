@@ -17,8 +17,8 @@ public class juego {
 		List<String> listOpciones = Arrays.asList(opciones);
 		
 		int pcEleccion = aleatorio.nextInt(opciones.length);
-		String respuesta = opciones[pcEleccion];
-		System.out.println(respuesta);
+		String respuesta = opciones[0];
+		//System.out.println(respuesta);
 
 		while (true) {
 
@@ -32,11 +32,13 @@ public class juego {
 
 			}
 			
-			System.out.println("Hola");
+			if (eleccion == "P" && opciones[0] == "P") {
+
+				System.out.println("Empate");
+
+			} 
 
 		}
-
-		
 
 	}
 
